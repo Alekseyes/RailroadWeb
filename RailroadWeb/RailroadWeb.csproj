@@ -37,6 +37,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,19 +47,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Computation\CrashComputationService.cs" />
     <Compile Include="Entities\Track.cs" />
     <Compile Include="Entities\RailRoad.cs" />
     <Compile Include="Entities\Rail.cs" />
     <Compile Include="Entities\Route.cs" />
     <Compile Include="Entities\Station.cs" />
     <Compile Include="Entities\Web.cs" />
+    <Compile Include="EntityReader.cs" />
+    <Compile Include="Enum\ComputationResponse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RailConverter.cs" />
+    <Compile Include="RailTypeConverter.cs" />
+    <Compile Include="Validation\ValidationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
     <EmbeddedResource Include="Routes\RouteTest1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes\RouteTest2.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Routes\RouteTest3.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="RailRoads\RailroadWeb.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

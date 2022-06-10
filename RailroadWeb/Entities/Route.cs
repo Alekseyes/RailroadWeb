@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace RailroadWeb.Entities
 {
+
     public class Route
     {
         public List<string> Stations { get; set; }
@@ -15,7 +12,13 @@ namespace RailroadWeb.Entities
             Stations = new List<string>();
         }
 
-       
-
+        /// <summary>
+        /// The constructor for testing purpose
+        /// </summary>
+        /// <param name="stations"></param>
+        public Route(params string[] stations)
+        {
+            Stations = new List<string>(stations);
+        }
     }
 }
